@@ -1,7 +1,7 @@
 // 리전 변수 - 서울 리전
 variable "aws_region" {
-  default = "ap-northeast-2"
-  type = string 
+  default = "ap-southeast-2"
+  type = string
 }
 
 // VPC CIDR - IP 대역, 최대 65,535개 IP 생성
@@ -18,7 +18,7 @@ variable "aws_vpc_public_subnets" {
 
 // 가용 영역 - A존, C존
 variable "aws_azs"  {
-    default = ["ap-northeast-2a", "ap-northeast-2c"]
+    default = ["ap-southeast-2a", "ap-southeast-2c"]
     type = list(string)
 }
 

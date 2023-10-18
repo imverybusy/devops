@@ -1,4 +1,4 @@
-.terraform
+Week2/terraform-backend/.terraform
 .git
 
 *.tfstate
