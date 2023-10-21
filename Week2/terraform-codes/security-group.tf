@@ -1,7 +1,7 @@
 // Default SG
 resource "aws_default_security_group" "test-vpc_sg_default"{
 
-  vpc_id = aws_vpc.test-vpc-hschoi.id
+  vpc_id = aws_vpc.test-vpc.id
 
   ingress {
     from_port = 0
@@ -23,7 +23,7 @@ resource "aws_default_security_group" "test-vpc_sg_default"{
 resource "aws_security_group" "test-sg-bastion" {
 
   name   = "test-sg-bastion"
-  vpc_id = aws_vpc.test-vpc-hschoi.id
+  vpc_id = aws_vpc.test-vpc.id
 
   ingress {
     description = "ingress security_group_rule for bastion"
@@ -51,7 +51,7 @@ resource "aws_security_group" "test-sg-bastion" {
 // - 컨트롤 플레인과 워커 노드 그룹 간의 통신
 resource "aws_security_group" "test-eks_sg_controlplane" {
 
-    vpc_id = aws_vpc.test-vpc-hschoi.id
+    vpc_id = aws_vpc.test-vpc.id
     name = "Test-EKS-SG-ControlPlane"
     description = "Communication between the control plane and worker nodegroups"
 
@@ -90,7 +90,7 @@ resource "aws_security_group_rule" "test-eks_sg_cluster_outbound" {
 // - 클러스터의 워커 노드에 대한 보안 그룹
 resource "aws_security_group" "test-eks_sg_nodes" {
 
-    vpc_id = aws_vpc.test-vpc-hschoi.id
+    vpc_id = aws_vpc.test-vpc.id
     name = "Test-EKS-SG-NodeGroup"
     description = "Security group for worker nodes in Cluster"
 

@@ -2,11 +2,11 @@ resource "aws_subnet" "test-public-subnet" {
 
   // 프로비저닝 전 VPC 생성
   depends_on = [
-    aws_vpc.test-vpc-hschoi
+    aws_vpc.test-vpc
   ]
 
   // VPC ID
-  vpc_id = aws_vpc.test-vpc-hschoi.id
+  vpc_id = aws_vpc.test-vpc.id
 
   // 서브넷 리스트 변수 항목의 개수를 가져옴
   count = length(var.aws_vpc_public_subnets)

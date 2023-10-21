@@ -16,7 +16,7 @@ resource "aws_dynamodb_table" "test-ddb-tflock-state" {
   depends_on = [aws_s3_bucket.test-s3-tf-state]
 
   // 테이블 이름
-  name = "comento-ddb-table-choi"
+  name = "comento-ddb-table-hschoi"
 
   // 파티션 키
   attribute {

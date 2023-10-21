@@ -14,13 +14,13 @@ terraform {
     region = "ap-southeast-2"
 
     // Lock 관리를 위한 DynamoDB 테이블명
-    dynamodb_table = "comento-ddb-table-choi"
+    dynamodb_table = "comento-ddb-table-hschoi"
 
     // Terraform 프로비저닝 자원 상태 파일 저장소명
     bucket = "comento-s3-bucket-hschoi"
 
     // Terraform 프로비저닝 자원 상태 파일명
-    key = "terraform-choi.tfstate"
+    key = "terraform.tfstate"
 
     // 버킷 암호화 적용
     encrypt = "true"
